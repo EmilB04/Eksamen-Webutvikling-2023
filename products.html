@@ -1,0 +1,187 @@
+<!--
+    TODO
+
+    Sjekke aria-labels med skjermleser, ev. legge til flere aria-labels
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Explore our portfolio and previous jobs in branding, design, and development.">
+    <meta name="keywords" content="products, portfolio, branding, design, development">
+    <meta name="author" content="Emil Berglund">
+
+    <!-- Open Graph Metadata-->
+    <meta property="og:title" content="See and explore our portfolio">
+    <meta property="og:description" content="Explore our portfolio and previous jobs in branding, design, and development.">
+    <meta property="og:image" content="ressurser/bilder/apple_pic.jpg">
+    <meta property="og:url" content="https://example.com/products.html">    <!--Nettsidens faktisk URL-->
+    <meta property="og:type" content="website">
+
+    <!-- Metadata spesielt for Facebook -->
+    <meta property="fb:app_id" content="your-facebook-app-id">              <!--Krever en faktisk facebook id-->
+
+    <!--                        -->
+    <link rel="stylesheet" href="ressurser/ikoner/ikoner/css/fontawesome.css">
+    <link rel="stylesheet" href="ressurser/ikoner/ikoner/css/brands.css">
+    <link rel="stylesheet" href="ressurser/ikoner/ikoner/css/solid.css">
+    
+    <link rel="stylesheet" href="ressurser/stilark/normalize.css">
+    <link rel="stylesheet" href="ressurser/stilark/stil.css">
+    <link rel="icon" href="ressurser/bilder/logo2.png">
+    <title>See and explore our portfolio - 'Website name'</title>
+    
+</head>
+<body itemscope itemtype="https://schema.org/WebPage">
+    <div id="grid_container">
+        <header>
+            <nav id="top" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                <span>
+                    <a href="index.html" title="Home" itemprop="url">
+                        <img src="ressurser/bilder/logo2.png" alt="Logo" itemprop="logo">
+                    </a>
+                </span>
+                <ul class="flex_center">
+                    <li itemprop="name"><a href="index.html" title="Home" itemprop="url">Home</a></li>
+                    <li itemprop="name"><a href="products.html" id="active_navigation" title="Portfolio" itemprop="url">Portfolio</a></li>
+                    <li itemprop="name"><a href="about.html" title="About" itemprop="url">About</a></li>
+                    <li itemprop="name"><a href="about.html#contact_us" id="contact" title="Contact" itemprop="url">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main id="PRODUCTS">
+            <section class="flex_center" id="portfolio">
+                <h1>Portfolio</h1>
+            </section>
+
+            <section class="flex_center" id="explore_previous_jobs" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                <h2 itemprop="name">Explore previous jobs</h2>
+                <article>
+                    <a href="#branding" title="Branding" itemprop="url"><span itemprop="name">Branding</span></a>
+                    <a href="#design" title="Design" itemprop="url"><span itemprop="name">Design</span></a>
+                    <a href="#development" title="Development" itemprop="url"><span itemprop="name">Development</span></a>
+                </article>
+            </section>
+
+            <div itemscope itemtype="http://schema.org/ItemList"> 
+                <meta itemprop="name" content="Innholdsseksjoner">
+                <section class="flex_center artikkelkort" id="branding" aria-label="Branding Section">
+                    <h2 itemprop="name">Branding</h2>
+                    <article itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="1">
+                        <a href="#" title="Project 1" itemprop="url">
+                            <img src="ressurser/bilder/400x400.svg" alt="Placeholder bilde" itemprop="image">
+                        </a>
+                        <h3 itemprop="name">Laboris officia eiusmod</h3>
+                    </article>
+                    <article itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="2">
+                        <a href="#" title="Project 2" itemprop="url">
+                            <img src="ressurser/bilder/400x400.svg" alt="Placeholder bilde" itemprop="image">
+                        </a>
+                        <h3 itemprop="name">Laboris officia eiusmod</h3>
+                    </article>
+                    <article itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="3">
+                        <a href="#" title="Project 3" itemprop="url">
+                            <img src="ressurser/bilder/400x400.svg" alt="Placeholder bilde" itemprop="image">
+                        </a>
+                        <h3 itemprop="name">Laboris officia eiusmod</h3>
+                    </article>
+                    <article itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="4">
+                        <a href="#" title="Project 4" itemprop="url">
+                            <img src="ressurser/bilder/400x400.svg" alt="Placeholder bilde" itemprop="image">
+                        </a>
+                        <h3 itemprop="name">Laboris officia eiusmod</h3>
+                    </article>
+                </section>
+
+                <section class="flex_center artikkelkort" id="design" aria-label="Design Section">
+                    <h2 itemprop="name">Design</h2>
+                    <article itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="5">
+                        <a href="#" itemprop="url">
+                            <img src="ressurser/bilder/400x400.svg" alt="Placeholder bilde" itemprop="image">
+                        </a>
+                        <h3 itemprop="name">Laboris officia eiusmod</h3>
+                    </article>
+                    <article itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="6">
+                        <a href="#" itemprop="url">
+                            <img src="ressurser/bilder/400x400.svg" alt="Placeholder bilde" itemprop="image">
+                        </a>
+                        <h3 itemprop="name">Laboris officia eiusmod</h3>
+                    </article>
+                    <article itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="7">
+                        <a href="#" itemprop="url">
+                            <img src="ressurser/bilder/400x400.svg" alt="Placeholder bilde" itemprop="image">
+                        </a>
+                        <h3 itemprop="name">Laboris officia eiusmod</h3>
+                    </article>
+                </section>
+
+                <section class="flex_center artikkelkort" id="development" aria-label="Development Section">
+                    <h2 itemprop="name">Development</h2>
+                    <article itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="8">
+                        <a href="#" itemprop="url">
+                            <img src="ressurser/bilder/400x400.svg" alt="Placeholder bilde" itemprop="image">
+                        </a>
+                        <h3 itemprop="name">Laboris officia eiusmod</h3>
+                    </article>
+                    <article itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="9">
+                        <a href="#" itemprop="url">
+                            <img src="ressurser/bilder/400x400.svg" alt="Placeholder bilde" itemprop="image">
+                        </a>
+                        <h3 itemprop="name">Laboris officia eiusmod</h3>
+                    </article>
+                </section>
+            </div>
+        </main>
+    
+
+        <span id="toTop" aria-label="Go to Top">
+            <a href="#top"><i class="fas fa-arrow-up"></i></a>
+        </span>
+
+        <footer itemscope itemtype="http://schema.org/WPFooter">
+            <section class="flex_center" id="logo_footer" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                <a href="index.html" itemprop="url"><img src="ressurser/bilder/logo2.png" alt="Logo" itemprop="logo"></a>
+                <p itemprop="name">&copy; 2023 Company. All rights reserved.</p>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" aria-label="Facebook" itemprop="url">
+                            <i
+                                class="fab fa-facebook-square">
+                            </i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" aria-label="Instagram" itemprop="url">
+                            <i
+                                class="fab fa-instagram-square">
+                            </i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/" aria-label="LinkedIn" itemprop="url">
+                            <i
+                                class="fab fa-linkedin">
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>

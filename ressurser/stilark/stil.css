@@ -1,0 +1,952 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+/*Importerer inn Roboto Font*/
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{grid-area: header;}
+main{grid-area: main;}
+footer{grid-area: footer;}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(1em + 1vw);
+    width: 100% !important;
+    max-width: 1600px !important;       /*Les i rapport*/
+    margin: 0 auto;                     /*Nettsiden skal alltid være sentrert på skjermen, uansett bredde*/
+    background-color: #f8f8f8;
+}
+
+/*-------------------------- Felles innhold for alle versjoner ----------------------------------*/
+#toTop{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+#toTop i{
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    border-radius: 4px 4px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+#toTop i:hover{
+    color: black;
+    background-color: white;
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+
+@media screen and (max-width: 1000px) { /*Faste verdier på mobil og nettbreett*/
+    nav span{
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+    nav ul{
+        text-align: center;
+        padding: 0;
+        margin: 1rem 0 0 0;
+    }
+    nav ul li{
+        list-style: none;
+        padding: 0.5rem 0;
+    }
+    nav ul li:last-child{
+        padding: 2rem 0;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+    #contact{
+        background-color: #e6bd43;
+        font-weight: 600;
+        padding: 1rem;
+    }
+    #active_navigation{
+        font-weight: 600;
+        padding: 0;
+        border-bottom: solid #e6bd43;
+    }
+    main h1{
+        font-size: 2.5rem;
+    }
+    main h2{
+        font-size: 2rem;
+        margin: 0;
+    }
+    main p{
+        text-align: left;
+    }
+    #grid_container{
+        display: grid;
+        grid-template-areas: "header" "main" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .flex_center{ /*Brukes flere steder*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 10%;
+    }
+
+    #newsletter{
+        background-color: #eeee;
+        padding: 2rem 0 4rem 0;
+        margin: 0;
+    }
+    #newsletter h3{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    #newsletter form{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 2%;
+    }
+    #newsletter form button{
+        background-color: #e6bd43;
+        border: none;
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-right: 10%;
+        white-space: nowrap;
+    }
+    #newsletter form input{
+        border: none;
+        padding: 1rem;
+        font-size: 1rem;
+        width: 100%;
+        margin-left: 10%;
+    }
+
+    #logo_footer{
+        background-color: #252525 ;
+        padding: 5rem 0;
+        margin: 0;
+        color: white;
+    }
+    #logo_footer ul{
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30%;
+    }
+    #logo_footer ul li{
+        list-style: none;
+    }
+    #logo_footer i {
+        color: white;
+        font-size: 3.5rem;
+    }
+}
+@media screen and (min-width: 1000px) { /*Faste verdier på desktop*/
+    #grid_container {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .flex_center{ /*Brukes flere steder*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 10%;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1rem; /*Lager litt luft for bakgrunnsvideoen*/
+    }
+    nav span{
+        margin: 1rem 0 0 1rem;  /*Stilsetting rundt logo*/
+    }
+    nav span img{
+        width: 75%;
+        height: auto;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row !important;
+        margin: 0 !important;
+    }
+    nav ul li{
+        list-style: none;
+        padding: 0 1rem;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+    #contact{
+        background-color: #e6bd43;
+        font-weight: 600;
+        padding: 1rem;
+    }
+    #contact:hover{
+        background-color: #252525;
+        color: #e6bd43;
+    }
+    #active_navigation{
+        font-weight: 600;
+        padding: 0;
+        border-bottom: solid #e6bd43;
+    }
+    
+    
+    main h1{
+        font-size: 3.5rem;
+    }
+    main h2{
+        font-size: 2.8rem;
+        margin: 0;
+    }
+    main h3{
+        font-size: 2.2rem;
+    }
+    main p{
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+
+    #newsletter{
+        background-color: #eeee;
+        padding: 2rem 0 4rem 0;
+        margin: 0;
+    }
+    #newsletter h3{
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 3rem;
+    }
+    #newsletter form{
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        gap: 2%;
+    }
+    #newsletter form button{
+        background-color: #e6bd43;
+        border: none;
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        flex-basis: 29%;
+        margin-right: 10%;
+        cursor: pointer;
+    }
+    #newsletter form button:hover{
+        background-color: #252525;
+        color: #e6bd43;
+    }
+    #newsletter form input{
+        border: none;
+        padding: 1.2rem;
+        font-size: 1rem;
+        width: 100%;
+        flex-basis: 69%;
+        margin-left: 10%;
+    }    
+    #logo_footer{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #252525 ;
+        padding: 5rem 2rem;
+        margin: 0;
+        color: white;
+    }
+    #logo_footer p{
+        font-size: 2rem;
+        text-align: center;
+    }
+    #logo_footer ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 2rem;
+        padding: 0;
+    }
+    #logo_footer ul li{
+        list-style: none;
+    }
+    #logo_footer i {
+        color: white;
+        font-size: 3rem;
+    }
+}
+
+
+@media screen and (max-width: 1000px) { /*Index Mobil og nettbrett*/
+    #main_services{
+        text-align: center;
+        background-size: cover;
+        background-position: center; 
+        color: black;
+        background-color: #ffffff86;
+        width: 100%;
+        margin: 0;
+        padding: 10rem 10%;
+    }
+    #main_services a{
+        display: block;
+        text-decoration: none;
+        color: black;
+        background-color: #e6bd43;
+        font-size: 1.5rem;
+        cursor: pointer;
+        font-weight: 600;
+        margin: 1rem 0;
+        padding: 1rem 1.5rem;
+        text-align: left;
+    }
+    #bakgrunnsMedia{
+        background-image: url("/ressurser/bilder/apple_pic.jpg");   /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
+        background-size: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        
+    }
+    #bakgrunnsMedia video{
+        display: none;
+    }
+
+    /*---------------------------------------*/
+
+    #help_visitors{
+        justify-content: center;
+        text-align: center;
+        margin: 5rem 10%;
+    }
+
+    /*---------------------------------------*/
+
+    #about_us{
+        background-color: #e6bd43;
+        padding: 10%;
+        text-align: center;
+        margin: 0;
+    }
+
+    #about_us picture{
+        margin: 0rem 0 2rem 0;
+        width: 100%;
+        height: 100%;
+    }
+    #about_us img{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    
+    #about_us a{
+        display: block;
+        background-color: #e6bd43;
+        border: 2px solid black;
+        margin: 1rem 0;
+        padding: 1rem 1.5rem;
+        text-align: left;
+        font-weight: 600;
+        font-size: 1.5rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+
+    /*---------------------------------------*/
+
+    #our_services{
+        text-align: center;
+        margin: 1rem 10%;
+        gap: 2rem;
+    }
+    #our_services h2{
+        margin: 2rem 0;
+    }
+    #our_services i{
+        color: black;
+        font-size: 2rem;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    #our_services p{
+        text-align: center;
+    }
+}
+@media screen and (min-width: 1000px) { /*Index Desktop*/
+    #main_services{
+        text-align: center;
+        background-size: cover;
+        background-position: center; 
+        flex-wrap: nowrap;
+        flex-direction: column;
+        color: black;
+        padding: 10rem 0;
+        width: 100%;
+        margin: 0;
+        background-color: #ffffff3a;
+    }
+    #main_services h1{
+        margin-top: 0;
+    }
+    #main_services p{
+        margin: 0 10%;
+    }
+    #main_services a{
+        display: inline-block;
+        width: auto;
+        text-decoration: none;
+        color: black;
+        background-color: #e6bd43;
+        font-size: 1.5rem;
+        cursor: pointer;
+        font-weight: 600;
+        padding: 1rem 1.5rem;
+        margin-top: 1rem;
+    }
+    #main_services a:hover{
+        background-color: #252525;
+        color: #e6bd43;
+    }
+
+    #bakgrunnsMedia {
+        position: relative;
+        overflow: hidden;
+    }   
+    #background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Setter videoen bak teksten */
+        object-fit: cover; /* For å sikre at videoen dekker hele bakgrunnen */
+    }
+
+    /*---------------------------------------*/
+
+    #help_visitors{
+        justify-content: center;
+        text-align: center;
+        padding: 10rem 10%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    #help_visitors h2{
+        margin-bottom: 1rem;
+    }
+
+    /*---------------------------------------*/
+
+
+    #about_us{
+        background-color: #e6bd43;
+        padding: 2rem 10%;
+        margin: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    #about_us p{
+        text-align: left;
+    }
+    #about_us article{
+        margin-left: 4%;
+    }
+    #about_us picture{
+        width: auto;
+        height: auto;
+        padding: 2%;
+    }
+    #about_us img{
+        width: auto;
+        height: 400px;
+        padding: 0;
+    }
+    #about_us a{
+        display: inline-block;
+        background-color: #e6bd43;
+        border: 2px solid black;
+        margin: 1rem 0;
+        padding: 1rem 1.5rem;
+        text-align: left;
+        font-weight: 600;
+        font-size: 1.5rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+    #about_us a:hover{
+        background-color: #252525;
+        color: #e6bd43;
+    }
+    /*---------------------------------------*/
+
+    #our_services{
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-evenly;
+        margin: 1rem 0;
+        gap: 1rem;
+        width: 100%;
+    }
+    #our_services h2{
+        margin: 2rem 0;
+        flex-basis: 100%;
+    }
+    #our_services i{
+        display: block;
+        color: black;
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        align-self: center;
+        align-items: center;
+    }
+    #our_services p{
+        text-align: center;
+    }
+    #our_services article{
+        width: 350px;
+    }
+
+    
+}
+@media screen and (max-width: 1000px) { /*Products Mobil og nettbrett*/
+    #portfolio{
+        margin: 0 auto 2rem 0;
+        padding: auto;
+        background-image: url("/ressurser/bilder/apple_pic.jpg"); /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
+        background-size: cover;
+        background-position: center;
+    }
+
+    /*---------------- TING SOM BLIR GJENTATT i Products-------------------------------------*/
+    #PRODUCTS h2{
+        border-bottom: solid #e6bd43;
+        width: 100%;
+        padding-bottom: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    #PRODUCTS img {
+        height: auto;
+        max-width: 100%;
+        width: 100%;
+    }
+    #PRODUCTS h3 {
+        margin: 1rem 0 3rem 0; /*Mellomrom mellom undertekst/undetittel og neste bilde*/
+    }
+    #PRODUCTS article{ /*Hovedsaklig for at bildene skal ta 100% av bredden*/
+        width: 100%;
+    }
+
+    /*------------------------------------------------------------------------------------*/
+    #portfolio h1{
+        padding: 10rem ;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff86;
+        margin: 0;
+    }
+
+    #explore_previous_jobs{
+        margin-bottom: 4rem;
+    }
+
+    .artikkelkort article {
+        min-width: 200px;
+        max-width: 692px;
+        flex: 1;
+    }
+
+    #explore_previous_jobs article{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    #explore_previous_jobs article a{
+        padding: 0.5rem;
+        border: 2px solid black;
+        color: black;
+        text-decoration: none;
+    }
+    
+
+}
+@media screen and (min-width: 1000px) { /*Products Desktop*/
+    #portfolio{
+        margin: 0 auto 2rem 0;
+        padding: auto;
+        background-image: url("/ressurser/bilder/apple_pic.jpg"); /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
+        background-size: cover;
+        background-position: center;
+    }
+    #portfolio h1{
+        margin: 0;
+        background-color: #ffffff86;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 15rem;
+    }
+    #explore_previous_jobs{
+        margin-bottom: 4rem;
+    }
+    #explore_previous_jobs article{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    #explore_previous_jobs article a{
+        padding: 0.5rem;
+        border: 2px solid black;
+        color: black;
+        text-decoration: none;
+    }
+    #explore_previous_jobs article a:hover{
+        background-color: #252525;
+        color: #e6bd43;
+    }
+
+    .artikkelkort article {
+        min-width: 200px;
+        max-width: 692px;
+        flex: 1;
+        transition: transform 1s;
+    }
+
+    .artikkelkort article:hover {        /*Når musepekeren er på elementet*/
+        transform: scale(1.1);           /*Størrelse*/
+        transition: transform 1s;        /*Hvor lang tid det tar å endre størrelse*/
+    }
+
+
+    #branding{
+        justify-content: space-between; /*Syntes denne passet bedre til 4 elementer*/
+        gap: 5%;
+    }
+    #design{
+        justify-content: space-around; /*Syntes denne passet bedre til 3 elementer*/
+        gap: 5%;
+    }
+    #development{
+        justify-content: space-evenly; /*Syntes denne passet bedre til 2 elementer*/
+        gap: 5%;
+    }
+
+    /*---------------- TING SOM BLIR GJENTATT i Products-------------------------------------*/
+    #PRODUCTS h2{
+        border-bottom: solid #e6bd43;
+        width: 100%;
+        padding-bottom: 0.5rem;
+        margin-bottom: 2rem;
+        flex-basis: 100%;
+    }
+    #PRODUCTS img {
+        width: 100%;
+    }
+    #PRODUCTS h3 {
+        margin: 1rem 0 3rem 0; /*Mellomrom mellom undertekst/undetittel og neste bilde*/
+    }
+}
+@media screen and (max-width: 1000px) { /*About Mobil og nettbrett*/
+    #bakgrunnsbilde{
+        margin: 0 auto;
+        padding: 3rem 0;
+        background-image: url("/ressurser/bilder/apple_pic.jpg"); /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
+        background-size: cover;
+        background-position: center;
+    }
+    #about_our_company{
+        background-color: #e6e6e6;
+        padding: 2rem 3rem;
+        text-align: left;
+    }
+    #about_our_company h1{
+        align-self: baseline;
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+    #about_our_company h2{
+        margin-bottom: 0.5rem;
+        align-self: baseline;
+    }
+    #about_our_company a{
+        width: 100%;
+        background-color: #e6bd43;
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        padding: 1rem;
+    }
+
+    #some_of_our_clients{
+        background-color: #e6bd43;
+        margin: 0 auto;
+        padding: 2rem 3rem;
+        text-align: left;
+        padding: 5rem 0;
+    }
+    #some_of_our_clients article{
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4%;
+        justify-content: space-around;
+    }
+    #contact_us{
+        margin: 4rem auto 0 auto;
+    }
+    #contact_us h2{
+        margin-bottom: 4rem;
+    }
+    #contact_form{
+        margin-bottom: 4rem;
+        width: 80%;
+    }
+    #contact_form form{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: auto;
+    }
+    #contact_form form input, #contact_us form textarea{
+        padding: 1rem;
+        border: none;
+        background-color: white;
+    }
+    #contact_form form button{
+        width: 50%;
+        background-color: #e6bd43;
+        border: none;
+        font-weight: 600;
+        padding: 1rem;
+    }
+    #contact_information h3{
+        align-self: flex-start;
+    }
+    
+    #contact_information ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #contact_information ul li {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    #contact_information ul li i {
+        margin-right: 2rem;
+        font-size: 1.5rem; 
+        width: 15px;
+    }
+    iframe{
+        width: 100%;
+        height: 35rem;
+        border: 0;
+    }
+
+}
+@media screen and (min-width: 1000px) { /*About Desktop*/
+    #bakgrunnsbilde{
+        margin: 0 auto;
+        padding: 4rem 0;
+        background-image: url("/ressurser/bilder/apple_pic.jpg"); /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
+        background-size: cover;
+        background-position: center;
+    }
+    #about_our_company{
+        background-color: #e6e6e6;
+        padding: 3rem 3rem;
+        flex-direction: column;
+        width: 50%;
+        margin: 0 47%;
+    }
+    #about_our_company p{
+        text-align: left;
+    }
+    #about_our_company h1{
+        align-self: baseline;
+        font-size: 2rem;
+        font-weight: normal;
+    }
+    #about_our_company h2{
+        margin-bottom: 0.5rem;
+        align-self: baseline;
+    }
+    #about_our_company a{
+        width: auto;
+        align-self: baseline;
+        background-color: #e6bd43;
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    #about_our_company a:hover{
+        background-color: #252525;
+        color: #e6bd43;
+    }
+
+    /*Our services er skrevet under index
+    ettersom det er der den ble brukt først
+    
+    Jeg har valgt å bruke id på elementet ettersom det er unikt for hver nettside.
+    */
+
+    
+    #some_of_our_clients{
+        background-color: #e6bd43;
+        margin: 0 auto;
+        padding: 5rem 0;
+        text-align: left;
+    }
+    #some_of_our_clients h2{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    #some_of_our_clients article{
+        width: 100%;
+        margin-top: 3rem;
+        display: flex;
+        gap: 5%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+
+
+    #contact_us{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+        margin: 4rem 0 0 0;
+    }
+    #contact_us h2{
+        margin-bottom: 4rem;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    #contact_form{
+        flex-basis: 45%;
+    }
+    #contact_form form{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: auto;
+    }
+    #contact_form form input, #contact_us form textarea{
+        padding: 1.5rem;
+        border: none;
+        background-color: white;
+        width: auto;
+        font-size: 1.5rem;
+    }
+    #contact_form label{
+        font-size: 1.5rem;
+    }
+    #contact_form form button{
+        width: min-content;
+        font-size: 2rem;
+        white-space: nowrap;
+        font-weight: 600;
+        padding: 1.5rem;
+        background-color: #e6bd43;
+        border: none;
+        margin-bottom: 4rem;
+    }
+    
+    #contact_form form button:hover{
+        background-color: #252525;
+        color: #e6bd43;
+    }
+    
+
+    #contact_information{
+        justify-content: left;
+        margin: 0;
+        flex-basis: 45%;
+    }
+    #contact_information p{
+        text-align: left;
+    }
+    
+    #contact_information ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #contact_information ul li {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    #contact_information ul li i {
+        margin-right: 2rem;
+        font-size: 1.5rem; 
+        width: 15px;
+    }
+    iframe{
+        width: 120%;
+        height: 35rem;
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1600px) {
+    .flex_center{
+        margin: 0;
+    }
+}
+
+    /*TODO!
+
+    */
