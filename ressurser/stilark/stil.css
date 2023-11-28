@@ -3,7 +3,7 @@
 
 * {
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    /*Hentet fra W3Schools*/
 }
 
 header{grid-area: header;}
@@ -31,10 +31,6 @@ body {
     padding: 1rem;
     border-radius: 4px 4px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-#toTop i:hover{
-    color: black;
-    background-color: white;
 }
 /*-----------------------------------------------------------------------------------------------*/
 
@@ -175,7 +171,7 @@ body {
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 1rem; /*Lager litt luft for bakgrunnsvideoen*/
+        margin-bottom: 1rem;    /*Lager litt luft for bakgrunnsvideoen*/
     }
     nav span{
         margin: 1rem 0 0 1rem;  /*Stilsetting rundt logo*/
@@ -214,6 +210,11 @@ body {
         border-bottom: solid #e6bd43;
     }
     
+
+    #toTop i:hover{
+    color: black;
+    background-color: white;
+    }
     
     main h1{
         font-size: 3.5rem;
@@ -275,7 +276,7 @@ body {
         align-items: center;
         justify-content: space-between;
         background-color: #252525 ;
-        padding: 5rem 2rem;
+        padding: 3rem 2rem;
         margin: 0;
         color: white;
     }
@@ -329,6 +330,7 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         overflow: hidden;
+        
     }
     #bakgrunnsMedia video{
         display: none;
@@ -408,7 +410,7 @@ body {
         padding: 10rem 0;
         width: 100%;
         margin: 0;
-        background-color: #ffffff3a;
+        background-color: #ffffff57;
     }
     #main_services h1{
         margin-top: 0;
@@ -506,13 +508,9 @@ body {
     /*---------------------------------------*/
 
     #our_services{
-        flex-direction: row;
-        flex-wrap: wrap;
         text-align: center;
         justify-content: space-evenly;
         margin: 1rem 0;
-        gap: 1rem;
-        width: 100%;
     }
     #our_services h2{
         margin: 2rem 0;
@@ -541,7 +539,7 @@ body {
     #portfolio{
         margin: 0 auto 2rem 0;
         padding: auto;
-        background-image: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
+        background-image: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");   /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
         background-size: cover;
         background-position: center;
     }
@@ -603,7 +601,7 @@ body {
     #portfolio{
         margin: 0 auto 2rem 0;
         padding: auto;
-        background-image: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
+        background-image: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");   /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
         background-size: cover;
         background-position: center;
     }
@@ -629,6 +627,7 @@ body {
         border: 2px solid black;
         color: black;
         text-decoration: none;
+        font-size: 1.5rem;
     }
     #explore_previous_jobs article a:hover{
         background-color: #252525;
@@ -650,15 +649,15 @@ body {
 
     #branding{
         justify-content: space-between; /*Syntes denne passet bedre til 4 elementer*/
-        gap: 5%;
+        gap: 2%;
     }
     #design{
         justify-content: space-around; /*Syntes denne passet bedre til 3 elementer*/
-        gap: 5%;
+        gap: 2%;
     }
     #development{
         justify-content: space-evenly; /*Syntes denne passet bedre til 2 elementer*/
-        gap: 5%;
+        gap: 2%;
     }
 
     /*---------------- TING SOM BLIR GJENTATT i Products-------------------------------------*/
@@ -680,7 +679,7 @@ body {
     #bakgrunnsbilde{
         margin: 0 auto;
         padding: 3rem 0;
-        background-image: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
+        background-image: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");   /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
         background-size: cover;
         background-position: center;
     }
@@ -784,7 +783,7 @@ body {
     #bakgrunnsbilde{
         margin: 0 auto;
         padding: 4rem 0;
-        background-image: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
+        background-image: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");   /*https://unsplash.com/photos/macbook-pro-dMUt0X3f59Q*/
         background-size: cover;
         background-position: center;
     }
@@ -843,10 +842,14 @@ body {
         width: 100%;
         margin-top: 3rem;
         display: flex;
-        gap: 5%;
+        gap: 10%;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
+    }
+    #some_of_our_clients article img{
+        width: 100%;
+        height: auto;
     }
     
 
@@ -864,7 +867,8 @@ body {
     }
 
     #contact_form{
-        flex-basis: 45%;
+        flex-basis: 40%;
+        margin: 0 0 0 5%;
     }
     #contact_form form{
         display: flex;
@@ -901,8 +905,8 @@ body {
 
     #contact_information{
         justify-content: left;
-        margin: 0;
-        flex-basis: 45%;
+        margin: 0 5% 0 0;
+        flex-basis: 40%;
     }
     #contact_information p{
         text-align: left;
@@ -921,11 +925,12 @@ body {
         display: flex;
         align-items: center;
         padding: 1rem 0;
+        font-size: 1.8rem;
     }
 
     #contact_information ul li i {
         margin-right: 2rem;
-        font-size: 1.5rem; 
+        font-size: 1.8rem;
         width: 15px;
     }
     iframe{
@@ -940,12 +945,12 @@ body {
 
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1600px) { /*Etter max-width*/
     .flex_center{
         margin: 0;
     }
+    #contact_form, #contact_information{
+        margin: 0;
+        flex-basis: 45%;
+    }
 }
-
-    /*TODO!
-
-    */
